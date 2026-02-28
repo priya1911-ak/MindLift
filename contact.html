@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Reach Out | MindLift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="nav-indicator"></div>
+
+    <header class="header sticky">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                MindLift
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="issues.html">Issues</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section bg-surface">
+            <div class="container reveal">
+                <h1>Contact & Reach Out</h1>
+                <p class="lead">Have questions or want to support our campaign? We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="contact section">
+            <div class="container">
+                <div class="grid-2 reveal">
+                    <div>
+                        <h2>Reach Out</h2>
+                        <p>Our team is dedicated to providing accurate information and connecting you with the support
+                            you need. For non-emergencies, feel free to drop a message.</p>
+
+                        <div class="contact-info" style="margin-top: 2rem;">
+                            <div style="margin-bottom: 1.5rem;">
+                                <strong>Email</strong>
+                                <p>hello@mindlift.org</p>
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <strong>Office</strong>
+                                <p>123 Calm Street, Serenity Tower, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links" style="margin-top: 2rem;">
+                            <h3>Follow Our Campaign</h3>
+                            <div style="display: flex; gap: 15px; margin-top: 10px;">
+                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">Twitter</a>
+                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">Instagram</a>
+                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="How can we help?"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter section bg-surface reveal">
+            <div class="container text-center">
+                <h2>Join the Community</h2>
+                <p>Subscribe to our newsletter for monthly updates on mental health awareness and new resources.</p>
+                <form id="newsletterForm" style="display: flex; gap: 10px; max-width: 500px; margin: 2rem auto;">
+                    <input type="email" placeholder="your@email.com" class="container"
+                        style="flex: 1; padding: 10px; border-radius: var(--radius-md); border: 1px solid #cbd5e1;">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">MindLift</a>
+                <p>Spreading awareness and providing support for mental health across the globe.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="issues.html">Issues</a></li>
+                </ul>
+            </div>
+            <div class="footer-help">
+                <h4>Get Support</h4>
+                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
+                <a href="support.html" class="btn btn-primary">Emergency Help</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Form Handling Logic
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            const errors = validateForm(formData);
+            if (Object.keys(errors).length === 0) {
+                showToast("Message sent successfully! We'll get back to you soon.");
+                e.target.reset();
+            } else {
+                showToast("Please fill in all fields correctly.", "error");
+            }
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast("Subscribed successfully!");
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>

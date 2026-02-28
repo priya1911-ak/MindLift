@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Issues | MindLift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="nav-indicator"></div>
+
+    <header class="header sticky">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                MindLift
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="issues.html" class="active">Issues</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section bg-surface">
+            <div class="container reveal">
+                <h1>Mental Health Issues</h1>
+                <p class="lead">Understanding common disorders and how to manage them.</p>
+            </div>
+        </section>
+
+        <section class="issues-grid-section section">
+            <div class="container">
+                <div class="issues-grid reveal">
+                    <!-- Depression Card -->
+                    <div class="issue-card" onclick="openModal('depression')">
+                        <div class="issue-icon">😔</div>
+                        <h3>Depression</h3>
+                        <p>Persistent feelings of sadness and loss of interest.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+
+                    <!-- Anxiety Card -->
+                    <div class="issue-card" onclick="openModal('anxiety')">
+                        <div class="issue-icon">😟</div>
+                        <h3>Anxiety Disorders</h3>
+                        <p>Overwhelming feelings of worry, fear, or dread.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+
+                    <!-- PTSD Card -->
+                    <div class="issue-card" onclick="openModal('ptsd')">
+                        <div class="issue-icon">🧠</div>
+                        <h3>PTSD</h3>
+                        <p>Post-Traumatic Stress Disorder following a traumatic event.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+
+                    <!-- Bipolar Card -->
+                    <div class="issue-card" onclick="openModal('bipolar')">
+                        <div class="issue-icon">🌓</div>
+                        <h3>Bipolar Disorder</h3>
+                        <p>Cycles of high (mania) and low (depression) moods.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+
+                    <!-- Eating Disorders Card -->
+                    <div class="issue-card" onclick="openModal('eating')">
+                        <div class="issue-icon">🍏</div>
+                        <h3>Eating Disorders</h3>
+                        <p>Unhealthy relationships with food and body image.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+
+                    <!-- Stress/Burnout Card -->
+                    <div class="issue-card" onclick="openModal('stress')">
+                        <div class="issue-icon">🔥</div>
+                        <h3>Stress & Burnout</h3>
+                        <p>Physical and mental exhaustion from prolonged stress.</p>
+                        <button class="btn-text">Read More &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Structure -->
+        <div id="issueModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalBody">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">MindLift</a>
+                <p>Spreading awareness and providing support for mental health across the globe.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="issues.html">Issues</a></li>
+                </ul>
+            </div>
+            <div class="footer-help">
+                <h4>Get Support</h4>
+                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
+                <a href="support.html" class="btn btn-primary">Emergency Help</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        const issueData = {
+            depression: {
+                title: "Depression",
+                symptoms: "Persistent sadness, loss of energy, changes in sleep or appetite, difficulty concentrating.",
+                causes: "Combination of genetic, biological, environmental, and psychological factors.",
+                guidance: "Seeking therapy (CBT), medication if prescribed, maintaining social connections, and regular exercise.",
+                whenToSeekHelp: "When feelings last longer than 2 weeks and interfere with daily life."
+            },
+            anxiety: {
+                title: "Anxiety Disorders",
+                symptoms: "Excessive worry, restlessness, rapid heartbeat, panic attacks, avoiding certain situations.",
+                causes: "Trauma, stress, genetics, or underlying health issues.",
+                guidance: "Cognitive Behavioral Therapy (CBT), mindfulness, deep breathing, and identifying triggers.",
+                whenToSeekHelp: "When worry is uncontrollable and starts causing physical symptoms or avoiding life tasks."
+            },
+            ptsd: {
+                title: "PTSD",
+                symptoms: "Flashbacks, nightmares, severe anxiety, and uncontrollable thoughts about the event.",
+                causes: "Experiencing or witnessing a terrifying event.",
+                guidance: "Trauma-focused therapy, group support, and grounding techniques.",
+                whenToSeekHelp: "If upsetting thoughts and feelings about the event continue for more than a month."
+            },
+            bipolar: {
+                title: "Bipolar Disorder",
+                symptoms: "Extreme mood swings from high (mania) to low (depression).",
+                causes: "Brain structure, genetics, and environment.",
+                guidance: "Long-term treatment with medication and psychotherapy is typically required.",
+                whenToSeekHelp: "During periods of intense mania or severe depressive episodes."
+            },
+            eating: {
+                title: "Eating Disorders",
+                symptoms: "Abnormal eating habits, preoccupation with weight/body shape, purging, or extreme restriction.",
+                causes: "Complex interaction of genetic, biological, behavioral, psychological, and social factors.",
+                guidance: "Medical monitoring, nutritional counseling, and therapy.",
+                whenToSeekHelp: "As soon as patterns of disordered eating are recognized."
+            },
+            stress: {
+                title: "Stress & Burnout",
+                symptoms: "Exhaustion, cynicism, reduced professional efficacy, headaches, and irritability.",
+                causes: "Prolonged exposure to high-pressure environments, lack of work-life balance.",
+                guidance: "Setting boundaries, taking breaks, prioritizing sleep, and outsourcing tasks.",
+                whenToSeekHelp: "When physical and emotional exhaustion stops you from functioning at work or home."
+            }
+        };
+
+        function openModal(id) {
+            const data = issueData[id];
+            const body = document.getElementById('modalBody');
+            body.innerHTML = `
+                <h2>${data.title}</h2>
+                <div class="modal-section">
+                    <h4>Symptoms</h4>
+                    <p>${data.symptoms}</p>
+                </div>
+                <div class="modal-section">
+                    <h4>Causes</h4>
+                    <p>${data.causes}</p>
+                </div>
+                <div class="modal-section">
+                    <h4>Recovery Guidance</h4>
+                    <p>${data.guidance}</p>
+                </div>
+                <div class="modal-section">
+                    <h4>When to Seek Help</h4>
+                    <p>${data.whenToSeekHelp}</p>
+                </div>
+                <a href="support.html" class="btn btn-primary" style="margin-top: 1rem;">Get Support for ${data.title}</a>
+            `;
+            document.getElementById('issueModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        }
+
+        function closeModal() {
+            document.getElementById('issueModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on outside click
+        window.onclick = function (event) {
+            const modal = document.getElementById('issueModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
