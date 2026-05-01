@@ -4,133 +4,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mental Health | MindLift</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Learn what mental health is, debunk common myths, and understand why mental health awareness is vital for everyone.">
+    <title>About Mental Health – MindLift</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header sticky">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">About Mental Health</h1>
+            <p class="reveal">Understanding mental health is the first step toward a healthier, more compassionate
+                world.</p>
+        </div>
+    </section>
+
+    <!-- What Is Mental Health -->
+    <section class="section" id="what-is">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What Is Mental Health?</h2>
+            </div>
+
+            <div class="card-grid" style="max-width:900px;margin:0 auto;">
+                <div class="card reveal" style="grid-column:1/-1;">
+                    <p style="font-size:var(--fs-md);line-height:1.9;color:var(--clr-text);">
+                        Mental health encompasses our emotional, psychological, and social well-being. It influences how
+                        we think, feel, and act in everyday life. It also helps determine how we handle stress, relate
+                        to others, and make choices.
+                    </p>
+                    <p
+                        style="font-size:var(--fs-sm);color:var(--clr-text-light);margin-top:var(--sp-md);line-height:1.9;">
+                        Mental health is important at every stage of life — from childhood and adolescence through
+                        adulthood. It is not simply the absence of a mental health condition; it is a state of
+                        well-being where a person can cope with the normal stresses of life, work productively, and
+                        contribute to their community. Just like physical health, mental health requires ongoing
+                        attention and care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-grid" style="margin-top:var(--sp-2xl);">
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🧠</div>
+                    <h3>Emotional Well-being</h3>
+                    <p>The ability to manage your emotions, feel positive, and maintain a sense of purpose and meaning
+                        in your life.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(184,169,212,.12);">🤝</div>
+                    <h3>Social Well-being</h3>
+                    <p>The quality of your relationships and ability to connect with others, communicate, and build
+                        supportive bonds.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(157,213,176,.12);">💪</div>
+                    <h3>Psychological Resilience</h3>
+                    <p>The capacity to adapt to challenges, recover from setbacks, and maintain perspective during
+                        difficult times.</p>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="page-header section bg-surface">
-            <div class="container reveal">
-                <h1>About Mental Health</h1>
-                <p class="lead">Understanding the foundation of our well-being.</p>
+    <!-- Myths & Facts -->
+    <section class="section" style="background:var(--clr-surface);" id="myths">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Myths vs. Facts</h2>
+                <p>Let us separate fiction from reality. Challenging misconceptions is essential to reducing stigma.</p>
             </div>
-        </section>
 
-        <section class="about-content section">
-            <div class="container">
-                <div class="grid-2 reveal">
-                    <div>
-                        <h2>What is Mental Health?</h2>
-                        <p>Mental health includes our emotional, psychological, and social well-being. It affects how we
-                            think, feel, and act. It also helps determine how we handle stress, relate to others, and
-                            make healthy choices.</p>
-                        <p>Mental health is important at every stage of life, from childhood and adolescence through
-                            adulthood.</p>
-                    </div>
-                    <div>
-                        <div class="info-box bg-primary-light">
-                            <h3>Did you know?</h3>
-                            <p>Mental health is just as important as physical health. They are deeply interconnected;
-                                poor mental health can increase the risk for long-term physical problems like diabetes
-                                and heart disease.</p>
-                        </div>
-                    </div>
+            <div class="myths-grid">
+                <div class="myth-card reveal">
+                    <span class="myth-label myth">Myth</span>
+                    <h3>"Mental health problems are uncommon."</h3>
+                    <p>Mental health conditions are incredibly common. According to the WHO, nearly 1 billion people
+                        worldwide live with a mental health condition. It can affect anyone, regardless of age, gender,
+                        or background.</p>
                 </div>
-
-                <div class="myths-facts section bg-surface reveal">
-                    <h2 class="text-center">Myths vs. Facts</h2>
-                    <div class="myths-grid">
-                        <div class="myth-card">
-                            <div class="myth"><strong>Myth:</strong> Mental health problems are a sign of weakness.
-                            </div>
-                            <div class="fact"><strong>Fact:</strong> Mental health issues have nothing to do with being
-                                lazy or weak. Many factors contribute to mental health problems, including genes,
-                                physical illness, injury, or brain chemistry.</div>
-                        </div>
-                        <div class="myth-card">
-                            <div class="myth"><strong>Myth:</strong> People with mental health needs can't work.</div>
-                            <div class="fact"><strong>Fact:</strong> People with mental health conditions are just as
-                                productive as other employees. Employers who hire people with mental health conditions
-                                report good attendance and punctuality.</div>
-                        </div>
-                    </div>
+                <div class="myth-card reveal">
+                    <span class="myth-label fact">Fact</span>
+                    <h3>Mental health conditions are treatable.</h3>
+                    <p>With the right support — whether therapy, lifestyle changes, medication, or a combination — most
+                        people with mental health conditions see significant improvement and lead fulfilling lives.</p>
                 </div>
-
-                <div class="importance section reveal">
-                    <h2>Why Awareness Matters</h2>
-                    <p>Awareness is the first step toward change. By talking openly about mental health, we:</p>
-                    <ul class="styled-list">
-                        <li>Reduce the stigma that prevents people from seeking help.</li>
-                        <li>Encourage early intervention and support.</li>
-                        <li>Create a more empathetic and inclusive society.</li>
-                        <li>Save lives by providing resources to those in crisis.</li>
-                    </ul>
+                <div class="myth-card reveal">
+                    <span class="myth-label myth">Myth</span>
+                    <h3>"People with mental health issues are just weak."</h3>
+                    <p>Mental health has nothing to do with personal weakness. It involves complex interactions among
+                        biological, social, and environmental factors. Asking for help is an act of courage, not
+                        weakness.</p>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <!-- Reusing Footer content from index -->
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
+                <div class="myth-card reveal">
+                    <span class="myth-label fact">Fact</span>
+                    <h3>Children and teens can have mental health concerns too.</h3>
+                    <p>Half of all mental health conditions begin by age 14. Early intervention and support can make a
+                        significant difference in a young person's life trajectory.</p>
+                </div>
+                <div class="myth-card reveal">
+                    <span class="myth-label myth">Myth</span>
+                    <h3>"Therapy is only for serious problems."</h3>
+                    <p>Therapy is beneficial for everyone. Just like regular physical checkups, talking to a
+                        professional can help you maintain good mental health, not just address crises.</p>
+                </div>
+                <div class="myth-card reveal">
+                    <span class="myth-label fact">Fact</span>
+                    <h3>You can support someone simply by listening.</h3>
+                    <p>You do not need to be a professional to help. Listening without judgment, being present, and
+                        encouraging someone to seek professional help are powerful forms of support.</p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+    </section>
+
+    <!-- Why Awareness Matters -->
+    <section class="section" id="importance">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Why Awareness Matters</h2>
+                <p>When we understand mental health, we build a world where everyone feels safe to seek the help they
+                    need.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(232,180,200,.12);">🗣️</div>
+                    <h3>Breaking the Silence</h3>
+                    <p>Many people suffer in silence due to fear of judgment. Awareness encourages open conversations
+                        that can save lives.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(240,201,166,.12);">🏥</div>
+                    <h3>Early Intervention</h3>
+                    <p>Recognizing signs early means faster access to support. Early help leads to better outcomes and
+                        prevents conditions from worsening.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🌍</div>
+                    <h3>Stronger Communities</h3>
+                    <p>Communities that prioritize mental health are more resilient, empathetic, and supportive,
+                        creating a better environment for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Infographic -->
+    <section class="section" style="background:var(--clr-surface);" id="infographic">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Mental Health by the Numbers</h2>
+                <p>Visual data that underscores the global impact of mental health.</p>
+            </div>
+
+            <div class="infographic-bars reveal">
+                <div class="info-bar">
+                    <div class="info-bar-label">
+                        <span>Depression – Leading cause of disability</span>
+                        <span>29%</span>
+                    </div>
+                    <div class="info-bar-track">
+                        <div class="info-bar-fill" data-width="29%"
+                            style="background:linear-gradient(90deg,var(--clr-primary),var(--clr-primary-dark));"></div>
+                    </div>
+                </div>
+                <div class="info-bar">
+                    <div class="info-bar-label">
+                        <span>Anxiety – Most common condition</span>
+                        <span>31%</span>
+                    </div>
+                    <div class="info-bar-track">
+                        <div class="info-bar-fill" data-width="31%"
+                            style="background:linear-gradient(90deg,var(--clr-secondary),var(--clr-secondary-dark));">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-bar">
+                    <div class="info-bar-label">
+                        <span>Youth affected before age 24</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="info-bar-track">
+                        <div class="info-bar-fill" data-width="75%"
+                            style="background:linear-gradient(90deg,var(--clr-accent),var(--clr-accent-dark));"></div>
+                    </div>
+                </div>
+                <div class="info-bar">
+                    <div class="info-bar-label">
+                        <span>People who do not seek help</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="info-bar-track">
+                        <div class="info-bar-fill" data-width="60%"
+                            style="background:linear-gradient(90deg,var(--clr-rose),var(--clr-peach));"></div>
+                    </div>
+                </div>
+                <div class="info-bar">
+                    <div class="info-bar-label">
+                        <span>Improvement with proper treatment</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="info-bar-track">
+                        <div class="info-bar-fill" data-width="80%"
+                            style="background:linear-gradient(90deg,var(--clr-primary),var(--clr-accent));"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or
+                    text <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+                    <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting
+                        people with the support they need.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="issues.html">Issues</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="resources.html">Resources</a>
+                    <a href="support.html">Get Help</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Help</h4>
+                    <a href="support.html">Emergency Support</a>
+                    <a href="resources.html">Breathing Exercise</a>
+                    <a href="resources.html">Self-Care Checklist</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">👤</span>
+                        <span class="footer-contact-name">Priya</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+918396014848">+91 8396014848</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📧</span>
+                        <a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not
+                    provide medical advice or diagnosis.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/voiceflow-assistant.js" defer></script>
 </body>
 
 </html>

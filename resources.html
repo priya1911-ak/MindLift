@@ -4,168 +4,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Help & Resources | MindLift</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Self-help tools and resources from MindLift: breathing exercises, grounding techniques, mood quiz, a daily self-care checklist, and downloadable guides.">
+    <title>Self-Help &amp; Resources – MindLift</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header sticky">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                    <li><a href="resources.html" class="active">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">Self-Help &amp; Resources</h1>
+            <p class="reveal">Practical tools to help you care for your mental well-being, one step at a time.</p>
+        </div>
+    </section>
+
+    <!-- ==================== BREATHING EXERCISE ==================== -->
+    <section class="section" id="breathing">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Breathing Exercise</h2>
+                <p>A simple 4-4-4 breathing technique to help calm your nervous system. Breathe in for 4 seconds, hold
+                    for 4, and breathe out for 4.</p>
+            </div>
+
+            <div class="breathing-container reveal">
+                <div class="breathing-circle" role="timer" aria-live="polite">
+                    <span id="breathing-label">Press Start</span>
+                </div>
+                <button id="breathing-start" class="btn btn-primary">Start Exercise</button>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="page-header section bg-surface">
-            <div class="container reveal">
-                <h1>Self-Help & Resources</h1>
-                <p class="lead">Tools and techniques to support your daily well-being.</p>
+    <!-- ==================== GROUNDING TECHNIQUE ==================== -->
+    <section class="section" style="background:var(--clr-surface);" id="grounding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>5-4-3-2-1 Grounding Technique</h2>
+                <p>This sensory awareness exercise helps bring you back to the present moment when feeling overwhelmed
+                    or anxious.</p>
             </div>
-        </section>
 
-        <!-- Breathing Exercise -->
-        <section class="breathing section reveal">
-            <div class="container text-center">
-                <h2>Guided Breathing</h2>
-                <p>Take a moment for yourself. Follow the circle to regulate your breath. <br><strong>Breathe in as it
-                        expands, out as it shrinks.</strong></p>
+            <div class="grounding-steps reveal">
+                <div class="grounding-step active">
+                    <span class="step-num">1</span>
+                    <h3>5 Things You Can See</h3>
+                    <p>Look around you and mentally name five things you can see. It could be a book, a tree, a pattern
+                        on the wall — anything in your visual field. Take your time and really notice each one.</p>
+                </div>
+                <div class="grounding-step">
+                    <span class="step-num">2</span>
+                    <h3>4 Things You Can Touch</h3>
+                    <p>Reach out and touch four objects nearby. Notice the texture — is it smooth, rough, warm, or cool?
+                        Feel the fabric of your clothing, the surface of a table, or the ground beneath your feet.</p>
+                </div>
+                <div class="grounding-step">
+                    <span class="step-num">3</span>
+                    <h3>3 Things You Can Hear</h3>
+                    <p>Close your eyes for a moment and listen. What three sounds do you notice? It might be the hum of
+                        an appliance, birds outside, or your own breathing. Focus on each sound individually.</p>
+                </div>
+                <div class="grounding-step">
+                    <span class="step-num">4</span>
+                    <h3>2 Things You Can Smell</h3>
+                    <p>Notice two scents around you. If you cannot smell anything immediately, think about two smells
+                        you enjoy — fresh coffee, rain, flowers, or a favorite meal.</p>
+                </div>
+                <div class="grounding-step">
+                    <span class="step-num">5</span>
+                    <h3>1 Thing You Can Taste</h3>
+                    <p>Focus on one taste in your mouth right now. Take a sip of water or simply notice the current
+                        taste. This final step brings your full attention back to the present moment.</p>
+                </div>
+            </div>
 
-                <div class="breathing-container">
-                    <div class="circle-wrap">
-                        <div class="circle-outline"></div>
-                        <div class="breathing-circle">
-                            <span id="breathing-text">Inhale</span>
+            <div class="grounding-nav reveal">
+                <button id="grounding-prev" class="btn btn-secondary" disabled>← Previous</button>
+                <button id="grounding-next" class="btn btn-primary">Next Step</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SELF-CARE CHECKLIST ==================== -->
+    <section class="section" id="checklist">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Daily Self-Care Checklist</h2>
+                <p>Small consistent acts of self-care can make a big difference. Check off each item as you complete it
+                    today. Your progress is saved automatically.</p>
+            </div>
+
+            <div class="checklist reveal stagger-children">
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>🌅 Got at least 7 hours of sleep last night</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>💧 Drank enough water throughout the day</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>🥗 Ate a balanced, nourishing meal</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>🚶 Moved my body for at least 20 minutes</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>📵 Took a break from screens for 30 minutes</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>🗣️ Connected with a friend or loved one</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>📝 Wrote down three things I am grateful for</span>
+                </div>
+                <div class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                    <div class="check-box"></div>
+                    <span>🧘 Practiced a relaxation or mindfulness exercise</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MOOD CHECK-IN QUIZ ==================== -->
+    <section class="section" style="background:var(--clr-surface);" id="mood-quiz">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>🧠 Mood Check-In Quiz</h2>
+                <p>Take a quick, private mood assessment to understand how you are feeling right now. This is not a
+                    diagnosis — just a helpful check-in with yourself.</p>
+            </div>
+
+            <div class="mood-test reveal" id="mood-test">
+                <!-- Progress bar -->
+                <div class="mood-progress">
+                    <div class="mood-progress-step current"></div>
+                    <div class="mood-progress-step"></div>
+                    <div class="mood-progress-step"></div>
+                    <div class="mood-progress-step"></div>
+                    <div class="mood-progress-step"></div>
+                    <div class="mood-progress-step"></div>
+                    <div class="mood-progress-step"></div>
+                </div>
+
+                <!-- Q1: Sleep -->
+                <div class="mood-question active">
+                    <h3>How well did you sleep recently?</h3>
+                    <p class="mood-q-sub">Think about the past few nights overall.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> Very well — I feel
+                            rested and refreshed</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Fairly well — decent
+                            sleep most nights</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Okay — some restless
+                            nights</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Poorly — I have
+                            trouble falling or staying asleep</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Very poorly — barely
+                            sleeping at all</button>
+                    </div>
+                </div>
+
+                <!-- Q2: Energy -->
+                <div class="mood-question">
+                    <h3>How would you describe your energy level?</h3>
+                    <p class="mood-q-sub">Think about how you have felt during the day.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> High energy — I feel
+                            motivated and active</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Good — I can get
+                            through my day well</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Moderate — some
+                            tiredness but manageable</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Low — I feel drained
+                            most of the time</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Very low — I struggle
+                            to do basic tasks</button>
+                    </div>
+                </div>
+
+                <!-- Q3: Enjoyment -->
+                <div class="mood-question">
+                    <h3>How much are you enjoying things you usually like?</h3>
+                    <p class="mood-q-sub">Hobbies, socializing, favorite activities, etc.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> A lot — I am engaged
+                            and finding joy</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Quite a bit — most
+                            things are still enjoyable</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Somewhat — some
+                            things feel less interesting</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Not much — I have
+                            lost interest in most things</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Not at all — nothing
+                            feels enjoyable right now</button>
+                    </div>
+                </div>
+
+                <!-- Q4: Anxiety -->
+                <div class="mood-question">
+                    <h3>How anxious or worried have you been feeling?</h3>
+                    <p class="mood-q-sub">Consider your overall anxiety level recently.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> Not anxious at all —
+                            I feel calm and relaxed</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Slightly — occasional
+                            worry but manageable</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Moderately — worry
+                            comes and goes frequently</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Quite anxious — I
+                            worry a lot throughout the day</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Extremely anxious —
+                            constant overwhelming worry</button>
+                    </div>
+                </div>
+
+                <!-- Q5: Focus -->
+                <div class="mood-question">
+                    <h3>How well can you concentrate on tasks?</h3>
+                    <p class="mood-q-sub">Work, reading, conversations, daily responsibilities.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> Very well — I feel
+                            focused and productive</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Well — minor
+                            distractions but generally focused</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Okay — my mind
+                            wanders sometimes</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Poorly — hard to
+                            focus on most things</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Very poorly — I
+                            cannot concentrate at all</button>
+                    </div>
+                </div>
+
+                <!-- Q6: Connection -->
+                <div class="mood-question">
+                    <h3>How connected do you feel to the people around you?</h3>
+                    <p class="mood-q-sub">Family, friends, colleagues, community.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> Very connected — I
+                            feel supported and valued</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Fairly connected — I
+                            have good relationships</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Somewhat — I feel a
+                            bit distant from others</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Disconnected — I feel
+                            lonely or isolated</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Very disconnected — I
+                            feel completely alone</button>
+                    </div>
+                </div>
+
+                <!-- Q7: Hope -->
+                <div class="mood-question">
+                    <h3>Overall, how hopeful do you feel about the future?</h3>
+                    <p class="mood-q-sub">Your general outlook on what lies ahead.</p>
+                    <div class="mood-options">
+                        <button class="mood-option" data-value="4"><span class="opt-radio"></span> Very hopeful — I feel
+                            optimistic about the future</button>
+                        <button class="mood-option" data-value="3"><span class="opt-radio"></span> Fairly hopeful —
+                            things will work out</button>
+                        <button class="mood-option" data-value="2"><span class="opt-radio"></span> Neutral — not sure
+                            what to expect</button>
+                        <button class="mood-option" data-value="1"><span class="opt-radio"></span> Not very hopeful — I
+                            am worried about the future</button>
+                        <button class="mood-option" data-value="0"><span class="opt-radio"></span> Hopeless — I cannot
+                            see things getting better</button>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="mood-nav">
+                    <button id="mood-prev" class="btn btn-secondary" style="display:none;">&#8592; Back</button>
+                    <button id="mood-next" class="btn btn-primary" disabled>Next</button>
+                </div>
+
+                <!-- Result -->
+                <div class="mood-result">
+                    <div class="mood-result-icon">😊</div>
+                    <h3>Your Mood</h3>
+                    <span class="mood-level high">High Mood</span>
+
+                    <div class="mood-meter">
+                        <div class="mood-meter-track">
+                            <div class="mood-meter-fill" style="width:0%;"></div>
+                        </div>
+                        <div class="mood-meter-labels">
+                            <span>Low</span>
+                            <span>Average</span>
+                            <span>High</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Grounding Technique -->
-        <section class="grounding section bg-surface reveal">
-            <div class="container">
-                <h2 class="text-center">5-4-3-2-1 Grounding Technique</h2>
-                <p class="text-center lead">Use this when you feel overwhelmed or anxious to bring yourself back to the
-                    present.</p>
-                <div class="grid-2" style="margin-top: 2rem;">
-                    <div class="card">
-                        <h3>5. See</h3>
-                        <p>Acknowledge 5 things you see around you. Maybe a bird, a plant, or a spot on the wall.</p>
-                    </div>
-                    <div class="card">
-                        <h3>4. Touch</h3>
-                        <p>Acknowledge 4 things you can touch. Your hair, a chair, or the ground under your feet.</p>
-                    </div>
-                    <div class="card">
-                        <h3>3. Hear</h3>
-                        <p>Acknowledge 3 things you hear. External sounds like traffic or the hum of a fridge.</p>
-                    </div>
-                    <div class="card">
-                        <h3>2. Smell</h3>
-                        <p>Acknowledge 2 things you can smell. Coffee, old books, or even the scent of the air.</p>
-                    </div>
-                </div>
-                <div class="card text-center"
-                    style="margin-top: var(--spacing-md); max-width: 300px; margin-left: auto; margin-right: auto;">
-                    <h3>1. Taste</h3>
-                    <p>Acknowledge 1 thing you can taste. What does your mouth taste like? Or think of a favorite food.
-                    </p>
-                </div>
-            </div>
-        </section>
+                    <p class="mood-result-text"></p>
 
-        <!-- Daily Self-Care Checklist -->
-        <section class="self-care section reveal">
-            <div class="container">
-                <div class="grid-2">
-                    <div>
-                        <h2>Daily Self-Care Checklist</h2>
-                        <p>Small habits can make a big difference over time. Try to check these off every day.</p>
-                        <ul class="checklist">
-                            <li><input type="checkbox"> <span>Drink at least 8 glasses of water</span></li>
-                            <li><input type="checkbox"> <span>Get 15 minutes of sunlight</span></li>
-                            <li><input type="checkbox"> <span>Practice 5 minutes of deep breathing</span></li>
-                            <li><input type="checkbox"> <span>Limit social media to 30 minutes</span></li>
-                            <li><input type="checkbox"> <span>Write down one thing you're grateful for</span></li>
-                            <li><input type="checkbox"> <span>Move your body (stretching counts!)</span></li>
-                        </ul>
-                    </div>
-                    <div class="info-box bg-secondary-light">
-                        <h3>Downloadable Guides</h3>
-                        <p>Access our community-curated resources for offline support.</p>
-                        <ul class="styled-list">
-                            <li><a href="#">Self-Care Planner (PDF)</a></li>
-                            <li><a href="#">Emergency Contact Template</a></li>
-                            <li><a href="#">Mindfulness Journal Prompts</a></li>
-                            <li><a href="#">Sleep Hygiene Tips</a></li>
-                        </ul>
-                        <button class="btn btn-primary" style="margin-top: 1rem;">View All Downloads</button>
+                    <div style="display:flex;gap:var(--sp-md);justify-content:center;flex-wrap:wrap;">
+                        <button class="btn btn-secondary mood-retake">🔄 Take Again</button>
+                        <a href="support.html" class="btn btn-primary">🆘 Get Support</a>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+    </section>
+
+    <!-- ==================== DOWNLOADABLE RESOURCES ==================== -->
+    <section class="section" id="downloads">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Downloadable Resources</h2>
+                <p>Helpful guides you can save and return to whenever you need them.</p>
+            </div>
+
+            <div class="downloads-grid reveal stagger-children">
+                <div class="download-card">
+                    <div class="dl-icon">📄</div>
+                    <h4>Understanding Anxiety – A Quick Guide</h4>
+                    <p>Learn the basics of anxiety, its triggers, and practical coping strategies.</p>
+                    <a href="#" class="btn btn-secondary"
+                        onclick="alert('This is a demo — in a live site this would download a PDF.');return false;">Download
+                        PDF</a>
+                </div>
+                <div class="download-card">
+                    <div class="dl-icon">📋</div>
+                    <h4>Weekly Mood Tracker Worksheet</h4>
+                    <p>A printable worksheet to track your mood patterns over a week.</p>
+                    <a href="#" class="btn btn-secondary"
+                        onclick="alert('This is a demo — in a live site this would download a PDF.');return false;">Download
+                        PDF</a>
+                </div>
+                <div class="download-card">
+                    <div class="dl-icon">🧘</div>
+                    <h4>Mindfulness Starter Pack</h4>
+                    <p>Five simple mindfulness exercises for beginners, with step-by-step instructions.</p>
+                    <a href="#" class="btn btn-secondary"
+                        onclick="alert('This is a demo — in a live site this would download a PDF.');return false;">Download
+                        PDF</a>
+                </div>
+                <div class="download-card">
+                    <div class="dl-icon">🆘</div>
+                    <h4>Crisis Support Quick Reference</h4>
+                    <p>A wallet card with essential helpline numbers and crisis steps.</p>
+                    <a href="#" class="btn btn-secondary"
+                        onclick="alert('This is a demo — in a live site this would download a PDF.');return false;">Download
+                        PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or
+                    text <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+                    <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting
+                        people with the support they need.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="issues.html">Issues</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="resources.html">Resources</a>
+                    <a href="support.html">Get Help</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Help</h4>
+                    <a href="support.html">Emergency Support</a>
+                    <a href="resources.html">Breathing Exercise</a>
+                    <a href="resources.html">Self-Care Checklist</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">👤</span>
+                        <span class="footer-contact-name">Priya</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+918396014848">+91 8396014848</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📧</span>
+                        <a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not
+                    provide medical advice or diagnosis.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // Simple script to toggle breathing text
-        const textEl = document.getElementById('breathing-text');
-        setInterval(() => {
-            textEl.innerText = textEl.innerText === 'Inhale' ? 'Exhale' : 'Inhale';
-        }, 4000);
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/voiceflow-assistant.js" defer></script>
 </body>
 
 </html>

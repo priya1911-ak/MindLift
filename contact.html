@@ -4,168 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Reach Out | MindLift</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Reach out to MindLift with questions, feedback, or just to connect. We are here to listen and support you.">
+    <title>Contact &amp; Reach Out – MindLift</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header sticky">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html" class="active">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
             </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="page-header section bg-surface">
-            <div class="container reveal">
-                <h1>Contact & Reach Out</h1>
-                <p class="lead">Have questions or want to support our campaign? We'd love to hear from you.</p>
-            </div>
-        </section>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">Contact &amp; Reach Out</h1>
+            <p class="reveal">Whether you have a question, feedback, or simply want to connect — we would love to hear
+                from you.</p>
+        </div>
+    </section>
 
-        <section class="contact section">
-            <div class="container">
-                <div class="grid-2 reveal">
-                    <div>
-                        <h2>Reach Out</h2>
-                        <p>Our team is dedicated to providing accurate information and connecting you with the support
-                            you need. For non-emergencies, feel free to drop a message.</p>
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
 
-                        <div class="contact-info" style="margin-top: 2rem;">
-                            <div style="margin-bottom: 1.5rem;">
-                                <strong>Email</strong>
-                                <p>hello@mindlift.org</p>
-                            </div>
-                            <div style="margin-bottom: 1.5rem;">
-                                <strong>Office</strong>
-                                <p>123 Calm Street, Serenity Tower, NY 10001</p>
-                            </div>
+                <!-- Form -->
+                <div class="contact-form reveal">
+                    <h2 style="font-size:var(--fs-2xl);margin-bottom:var(--sp-sm);">Send Us a Message</h2>
+                    <p
+                        style="font-size:var(--fs-sm);color:var(--clr-text-light);margin-bottom:var(--sp-2xl);line-height:1.8;">
+                        We read every message. While we are not a crisis service, we will do our best to respond and
+                        point you in the right direction.</p>
+
+                    <form id="contact-form" novalidate>
+                        <div class="form-group" data-validate="required">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" placeholder="e.g. Priya Sharma" autocomplete="name"
+                                required aria-required="true">
+                            <span class="error-text">Please enter your name.</span>
                         </div>
 
-                        <div class="social-links" style="margin-top: 2rem;">
-                            <h3>Follow Our Campaign</h3>
-                            <div style="display: flex; gap: 15px; margin-top: 10px;">
-                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">Twitter</a>
-                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">Instagram</a>
-                                <a href="#" class="btn btn-outline" style="padding: 10px 15px;">LinkedIn</a>
+                        <div class="form-group" data-validate="email">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" placeholder="e.g. priya@example.com"
+                                autocomplete="email" required aria-required="true">
+                            <span class="error-text">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group" data-validate="required">
+                            <label for="contact-message">Your Message</label>
+                            <textarea id="contact-message" rows="6" placeholder="Type your message here…" required
+                                aria-required="true"></textarea>
+                            <span class="error-text">Please enter your message.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Info Side -->
+                <div class="contact-info-side reveal">
+                    <h3>We Are Here for You</h3>
+                    <p>MindLift is a public awareness campaign. While we do not provide clinical services, we are
+                        passionate about connecting people with the right support and resources.</p>
+
+                    <div class="contact-detail">
+                        <div class="detail-icon">📧</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="detail-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918396014848">+91 8396014848</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="detail-icon">⏰</div>
+                        <div>
+                            <h4>Response Time</h4>
+                            <p>We aim to respond within 48 hours on business days.</p>
+                        </div>
+                    </div>
+
+                    <!-- Creator Info Card -->
+                    <div class="contact-creator-card">
+                        <h3>👩‍💻 Created By</h3>
+                        <div class="creator-details">
+                            <div class="creator-detail-item">
+                                <span class="detail-emoji">👤</span>
+                                <span><strong>Priya</strong></span>
+                            </div>
+                            <div class="creator-detail-item">
+                                <span class="detail-emoji">📞</span>
+                                <a href="tel:+918396014848">+91 8396014848</a>
+                            </div>
+                            <div class="creator-detail-item">
+                                <span class="detail-emoji">📧</span>
+                                <a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="How can we help?"
-                                    required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                        </form>
+                    <div
+                        style="margin-top:var(--sp-2xl);padding:var(--sp-xl);background:rgba(157,213,176,.1);border-radius:var(--radius-md);border:1px solid rgba(157,213,176,.3);">
+                        <p style="font-size:var(--fs-sm);color:var(--clr-text);line-height:1.8;">
+                            <strong>🆘 Need immediate help?</strong><br>
+                            If you are in crisis, please contact the <strong>988 Suicide &amp; Crisis Lifeline</strong>
+                            (call or text 988) or the <strong>Crisis Text Line</strong> (text HOME to 741741). These
+                            services are free, confidential, and available 24/7.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter section bg-surface reveal">
-            <div class="container text-center">
-                <h2>Join the Community</h2>
-                <p>Subscribe to our newsletter for monthly updates on mental health awareness and new resources.</p>
-                <form id="newsletterForm" style="display: flex; gap: 10px; max-width: 500px; margin: 2rem auto;">
-                    <input type="email" placeholder="your@email.com" class="container"
-                        style="flex: 1; padding: 10px; border-radius: var(--radius-md); border: 1px solid #cbd5e1;">
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or
+                    text <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+                    <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting
+                        people with the support they need.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="issues.html">Issues</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="resources.html">Resources</a>
+                    <a href="support.html">Get Help</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Help</h4>
+                    <a href="support.html">Emergency Support</a>
+                    <a href="resources.html">Breathing Exercise</a>
+                    <a href="resources.html">Self-Care Checklist</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not
+                    provide medical advice or diagnosis.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // Form Handling Logic
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            const errors = validateForm(formData);
-            if (Object.keys(errors).length === 0) {
-                showToast("Message sent successfully! We'll get back to you soon.");
-                e.target.reset();
-            } else {
-                showToast("Please fill in all fields correctly.", "error");
-            }
-        });
-
-        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            showToast("Subscribed successfully!");
-            e.target.reset();
-        });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/voiceflow-assistant.js" defer></script>
 </body>
 
 </html>

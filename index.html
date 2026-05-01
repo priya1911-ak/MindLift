@@ -1,147 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindLift | You Are Not Alone - Mental Health Awareness</title>
-    <meta name="description" content="MindLift is a public awareness campaign dedicated to mental health support, reducing stigma, and providing resources for emotional well-being.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MindLift – A public awareness campaign to spread mental health awareness, reduce stigma, and guide people to professional support. You are not alone.">
+  <title>MindLift – You Are Not Alone</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orbs" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <span class="hero-badge reveal">🌿 Mental Health Awareness</span>
+      <h1 class="reveal">You Are Not Alone.<br>Your Mental Health Matters.</h1>
+      <p class="reveal">MindLift is here to break the silence around mental health. Whether you are struggling or simply
+        want to learn, we are with you every step of the way.</p>
+      <div class="hero-buttons reveal">
+        <a href="support.html" class="btn btn-primary">🆘 Get Help Now</a>
+        <a href="about.html" class="btn btn-secondary">📖 Learn About Mental Health</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MISSION ==================== -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Mission</h2>
+        <p>We believe that mental health care is a right, not a privilege. MindLift exists to spread awareness, reduce
+          stigma, and connect people with the support they deserve.</p>
+      </div>
+
+      <div class="card-grid stagger-children reveal">
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(126,184,218,.12);">💡</div>
+          <h3>Raise Awareness</h3>
+          <p>Educating communities about the importance of mental well-being through reliable, compassionate
+            information.</p>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero section" id="home">
-            <div class="container hero-grid">
-                <div class="hero-content reveal">
-                    <h1 class="animate-float">Mental Health Matters. <br><span class="text-primary">You Are Not Alone.</span></h1>
-                    <p class="lead">MindLift is here to bridge the gap between struggling in silence and finding the support you deserve. Together, we can break the stigma.</p>
-                    <div class="hero-btns">
-                        <a href="support.html" class="btn btn-primary">Get Help Now</a>
-                        <a href="about.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-visual reveal">
-                    <!-- Visual elements like the floating orbs are injected via JS -->
-                    <div class="hero-blob"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission Statement -->
-        <section class="mission section reveal">
-            <div class="container text-center">
-                <h2 class="section-title">Our Mission</h2>
-                <p class="mission-text">To empower individuals through education, reduce the societal stigma surrounding mental illness, and provide accessible resources for those seeking emotional support and professional guidance.</p>
-            </div>
-        </section>
-
-        <!-- Stats Counter -->
-        <section class="stats section bg-surface reveal">
-            <div class="container stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="1000000">0</span>
-                    <p>People Reached</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="50000">0</span>
-                    <p>Support Resources Provided</p>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="1500">0</span>
-                    <p>Verified Professionals</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Preview Section -->
-        <section class="issues-preview section reveal">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Understand the Issues</h2>
-                    <a href="issues.html" class="text-link">View all issues &rarr;</a>
-                </div>
-                <div class="preview-cards">
-                    <div class="card">
-                        <h3>Anxiety</h3>
-                        <p>More than just being worried. Learn the symptoms and how to manage it.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Depression</h3>
-                        <p>Understanding the weight of depression and finding the path to recovery.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Stress</h3>
-                        <p>Identifying the triggers of modern burnout and stress management techniques.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
-            </div>
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(184,169,212,.12);">🤝</div>
+          <h3>Reduce Stigma</h3>
+          <p>Creating an open, judgment-free space where talking about mental health is just as normal as talking about
+            physical health.</p>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(157,213,176,.12);">🛡️</div>
+          <h3>Provide Support</h3>
+          <p>Connecting people with professional resources, helplines, and self-help tools to begin their journey toward
+            healing.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
+  <!-- ==================== STATISTICS ==================== -->
+  <section class="section" style="background:var(--clr-surface);" id="stats">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>The Numbers Speak</h2>
+        <p>Mental health affects more people than you might think. Understanding the scope helps us act together.</p>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <div class="stat-number" data-count="970" data-suffix="M">0</div>
+          <div class="stat-label">People worldwide live with a mental health condition</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="1" data-suffix=" in 4">0</div>
+          <div class="stat-label">People will experience a mental health issue in their lifetime</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="75" data-suffix="%">0</div>
+          <div class="stat-label">Of mental health conditions begin before age 24</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="60" data-suffix="%">0</div>
+          <div class="stat-label">Of people with mental health issues do not seek help</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ISSUES PREVIEW ==================== -->
+  <section class="section" id="issues-preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Key Mental Health Issues</h2>
+        <p>Learn about common conditions so you can recognize the signs in yourself or someone you care about.</p>
+      </div>
+
+      <div class="card-grid stagger-children reveal">
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(126,184,218,.12);">🌧️</div>
+          <h3>Depression</h3>
+          <p>More than just feeling sad — depression is a persistent condition that affects how you think, feel, and
+            handle daily activities.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(184,169,212,.12);">😰</div>
+          <h3>Anxiety Disorders</h3>
+          <p>Persistent worry that goes beyond normal stress, including panic attacks, social anxiety, and generalized
+            anxiety.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon" style="background:rgba(157,213,176,.12);">🔥</div>
+          <h3>Stress &amp; Burnout</h3>
+          <p>Chronic stress can lead to emotional exhaustion, detachment, and a lasting sense of overwhelm.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--sp-2xl);" class="reveal">
+        <a href="issues.html" class="btn btn-secondary">Explore All Issues →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section" style="background:var(--clr-surface);" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Stories of Strength</h2>
+        <p>Real voices, real journeys. These stories remind us that recovery is possible and help is worth seeking.</p>
+      </div>
+
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonial-track">
+          <div class="testimonial-item">
+            <p class="testimonial-text">I spent years thinking I was just being dramatic. When I finally talked to
+              someone, everything changed. Asking for help was the bravest thing I ever did.</p>
+            <p class="testimonial-author">— Priya, 28</p>
+          </div>
+          <div class="testimonial-item">
+            <p class="testimonial-text">Therapy taught me that my anxiety didn't define me. I still have hard days, but
+              now I have the tools to get through them.</p>
+            <p class="testimonial-author">— Marcus, 34</p>
+          </div>
+          <div class="testimonial-item">
+            <p class="testimonial-text">After my burnout, I learned the importance of boundaries. I wish I had reached
+              out sooner — there is no shame in needing support.</p>
+            <p class="testimonial-author">— Aisha, 31</p>
+          </div>
+          <div class="testimonial-item">
+            <p class="testimonial-text">MindLift's resources helped me understand what I was going through. Sometimes,
+              just knowing you are not alone is the first step.</p>
+            <p class="testimonial-author">— David, 26</p>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <button class="testimonial-dot active" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" aria-label="Slide 3"></button>
+          <button class="testimonial-dot" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section" id="cta">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <h2
+          style="font-size:var(--fs-3xl);margin-bottom:var(--sp-md);background:linear-gradient(135deg,var(--clr-primary-dark),var(--clr-accent-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+          Take the First Step Today</h2>
+        <p style="font-size:var(--fs-md);color:var(--clr-text-light);max-width:560px;margin:0 auto var(--sp-2xl);">
+          Whether you need someone to talk to or simply want to learn more, we are here for you. Reaching out is a sign
+          of strength.</p>
+        <div class="hero-buttons" style="justify-content:center;">
+          <a href="support.html" class="btn btn-primary">🆘 Get Support</a>
+          <a href="resources.html" class="btn btn-accent">📚 Self-Help Resources</a>
+          <a href="contact.html" class="btn btn-secondary">✉️ Reach Out</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-emergency">
+        <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or text
+          <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.
+        </p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+          <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting people
+            with the support they need.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="issues.html">Issues</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="resources.html">Resources</a>
+          <a href="support.html">Get Help</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Help</h4>
+          <a href="support.html">Emergency Support</a>
+          <a href="resources.html">Breathing Exercise</a>
+          <a href="resources.html">Self-Care Checklist</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not provide
+          medical advice or diagnosis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/voiceflow-assistant.js" defer></script>
 </body>
+
 </html>

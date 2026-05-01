@@ -4,229 +4,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Issues | MindLift</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Explore common mental health conditions including depression, anxiety, PTSD, bipolar disorder, eating disorders, and burnout with MindLift.">
+    <title>Mental Health Issues – MindLift</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header sticky">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html" class="active">Issues</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">Mental Health Issues</h1>
+            <p class="reveal">Understanding conditions is the foundation of empathy and support. Click any card below to
+                learn more.</p>
+        </div>
+    </section>
+
+    <!-- Issues Cards -->
+    <section class="section" id="issues">
+        <div class="container">
+            <div class="card-grid stagger-children reveal">
+
+                <!-- Depression -->
+                <div class="card reveal" data-modal="modal-depression" role="button" tabindex="0"
+                    aria-label="Learn more about Depression" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🌧️</div>
+                    <h3>Depression</h3>
+                    <p>A persistent feeling of sadness and loss of interest that goes beyond normal emotional responses.
+                        It affects daily life, relationships, and overall well-being.</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
+                <!-- Anxiety Disorders -->
+                <div class="card reveal" data-modal="modal-anxiety" role="button" tabindex="0"
+                    aria-label="Learn more about Anxiety Disorders" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(184,169,212,.12);">😰</div>
+                    <h3>Anxiety Disorders</h3>
+                    <p>Excessive, persistent worry and fear about everyday situations. Includes generalized anxiety,
+                        panic disorder, social anxiety, and specific phobias.</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
+                <!-- PTSD -->
+                <div class="card reveal" data-modal="modal-ptsd" role="button" tabindex="0"
+                    aria-label="Learn more about PTSD" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(232,180,200,.12);">🔒</div>
+                    <h3>PTSD</h3>
+                    <p>Post-Traumatic Stress Disorder develops after experiencing or witnessing a deeply distressing
+                        event. It can cause flashbacks, nightmares, and severe anxiety.</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
+                <!-- Bipolar Disorder -->
+                <div class="card reveal" data-modal="modal-bipolar" role="button" tabindex="0"
+                    aria-label="Learn more about Bipolar Disorder" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(240,201,166,.12);">🎭</div>
+                    <h3>Bipolar Disorder</h3>
+                    <p>Characterized by extreme shifts in mood, energy, and activity levels — from emotional highs
+                        (mania) to lows (depression).</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
+                <!-- Eating Disorders -->
+                <div class="card reveal" data-modal="modal-eating" role="button" tabindex="0"
+                    aria-label="Learn more about Eating Disorders" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(157,213,176,.12);">🍃</div>
+                    <h3>Eating Disorders</h3>
+                    <p>Serious conditions related to persistent eating behaviors that negatively impact health,
+                        emotions, and the ability to function in daily life.</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
+                <!-- Stress & Burnout -->
+                <div class="card reveal" data-modal="modal-burnout" role="button" tabindex="0"
+                    aria-label="Learn more about Stress and Burnout" style="cursor:pointer;">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🔥</div>
+                    <h3>Stress &amp; Burnout</h3>
+                    <p>Chronic, unmanaged stress that leads to emotional exhaustion, detachment, and reduced
+                        effectiveness. Common in work, caregiving, and academic settings.</p>
+                    <span
+                        style="display:block;margin-top:var(--sp-md);font-size:var(--fs-xs);color:var(--clr-primary-dark);font-weight:var(--fw-semi);">Click
+                        to learn more →</span>
+                </div>
+
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="page-header section bg-surface">
-            <div class="container reveal">
-                <h1>Mental Health Issues</h1>
-                <p class="lead">Understanding common disorders and how to manage them.</p>
+    <!-- ==================== MODALS ==================== -->
+    <div class="modal-overlay" id="modal-overlay">
+
+        <!-- Depression Modal -->
+        <div class="modal" id="modal-depression" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>🌧️ Depression</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Persistent sadness, emptiness, or hopelessness</li>
+                <li>Loss of interest in activities you once enjoyed</li>
+                <li>Changes in appetite or weight</li>
+                <li>Difficulty sleeping or sleeping too much</li>
+                <li>Fatigue and low energy</li>
+                <li>Difficulty concentrating or making decisions</li>
+                <li>Feelings of worthlessness or excessive guilt</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>Depression can result from a combination of genetic, biological, environmental, and psychological
+                factors. Stressful life events, trauma, certain medications, and chronic illnesses may contribute.</p>
+            <h3>When to Seek Help</h3>
+            <p>If symptoms persist for more than two weeks, interfere with daily life, or include thoughts of self-harm,
+                please reach out to a mental health professional or crisis helpline immediately.</p>
+            <h3>Recovery Guidance</h3>
+            <p>Recovery is possible. Talking therapies (such as cognitive-behavioral therapy), lifestyle changes, social
+                support, and in some cases medication can help. Building a routine, staying connected, and being patient
+                with yourself are all important steps forward.</p>
+        </div>
+
+        <!-- Anxiety Modal -->
+        <div class="modal" id="modal-anxiety" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>😰 Anxiety Disorders</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Excessive, uncontrollable worry</li>
+                <li>Restlessness or feeling on edge</li>
+                <li>Rapid heartbeat, sweating, trembling</li>
+                <li>Difficulty concentrating</li>
+                <li>Sleep disturbances</li>
+                <li>Avoidance of feared situations</li>
+                <li>Panic attacks (sudden intense fear)</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>Anxiety disorders can be triggered by genetic predisposition, brain chemistry, stressful environments,
+                trauma, or a combination of factors. They are not a sign of weakness.</p>
+            <h3>When to Seek Help</h3>
+            <p>If anxiety is constant, overwhelming, or prevents you from carrying out daily activities, professional
+                guidance can make a meaningful difference.</p>
+            <h3>Recovery Guidance</h3>
+            <p>Effective approaches include therapy (especially CBT and exposure therapy), relaxation techniques,
+                regular exercise, and mindfulness practices. Many people find significant relief with the right support.
+            </p>
+        </div>
+
+        <!-- PTSD Modal -->
+        <div class="modal" id="modal-ptsd" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>🔒 PTSD</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Flashbacks — reliving the traumatic event</li>
+                <li>Nightmares and severe anxiety</li>
+                <li>Avoiding places, people, or activities that trigger memories</li>
+                <li>Emotional numbness or detachment</li>
+                <li>Being easily startled or feeling tense</li>
+                <li>Difficulty sleeping or angry outbursts</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>PTSD can develop after experiencing or witnessing a traumatic event such as violence, accidents, natural
+                disasters, or abuse. The severity depends on individual vulnerability and the nature of the trauma.</p>
+            <h3>When to Seek Help</h3>
+            <p>If you have been experiencing these symptoms for more than a month and they are affecting your daily
+                life, please consider talking to a trauma-informed professional.</p>
+            <h3>Recovery Guidance</h3>
+            <p>Trauma-focused therapy (such as EMDR or prolonged exposure therapy), support groups, and self-care
+                practices can help. Healing is not linear, but recovery is absolutely possible.</p>
+        </div>
+
+        <!-- Bipolar Modal -->
+        <div class="modal" id="modal-bipolar" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>🎭 Bipolar Disorder</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Manic episodes: elevated mood, high energy, reduced need for sleep, racing thoughts</li>
+                <li>Depressive episodes: sadness, fatigue, loss of interest, difficulty concentrating</li>
+                <li>Mood shifts that may last days, weeks, or longer</li>
+                <li>Impulsive or risky behavior during manic phases</li>
+                <li>Withdrawal and isolation during depressive phases</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>Bipolar disorder involves a combination of genetics, brain structure and function, and environmental
+                factors. It is a medical condition, not a character flaw.</p>
+            <h3>When to Seek Help</h3>
+            <p>If you notice unusual mood swings that interfere with work, relationships, or daily functioning, it is
+                important to speak with a healthcare provider for proper evaluation.</p>
+            <h3>Recovery Guidance</h3>
+            <p>With a combination of mood-stabilizing approaches, therapy, consistent routines, and a strong support
+                network, many people with bipolar disorder lead balanced and fulfilling lives.</p>
+        </div>
+
+        <!-- Eating Disorders Modal -->
+        <div class="modal" id="modal-eating" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>🍃 Eating Disorders</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Extreme concern with body weight or shape</li>
+                <li>Severely restricting food intake</li>
+                <li>Binge eating followed by purging behaviors</li>
+                <li>Compulsive exercising</li>
+                <li>Withdrawal from social activities involving food</li>
+                <li>Physical signs: fatigue, dizziness, hair loss</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>Eating disorders arise from a complex interplay of genetic, psychological, and sociocultural factors.
+                Media pressure, low self-esteem, and a history of trauma can contribute.</p>
+            <h3>When to Seek Help</h3>
+            <p>If eating behaviors are causing distress, physical health problems, or affecting daily life, please reach
+                out to a healthcare professional who specializes in eating disorders.</p>
+            <h3>Recovery Guidance</h3>
+            <p>Recovery often involves nutritional counseling, therapy (especially CBT), medical monitoring, and
+                building a healthy relationship with food and body image. Full recovery is possible.</p>
+        </div>
+
+        <!-- Burnout Modal -->
+        <div class="modal" id="modal-burnout" style="display:none;">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <h2>🔥 Stress &amp; Burnout</h2>
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Emotional exhaustion and feeling drained</li>
+                <li>Cynicism or detachment from work or responsibilities</li>
+                <li>Reduced sense of accomplishment</li>
+                <li>Physical symptoms: headaches, insomnia, muscle tension</li>
+                <li>Difficulty concentrating</li>
+                <li>Feeling overwhelmed by routine tasks</li>
+            </ul>
+            <h3>Possible Causes</h3>
+            <p>Burnout often results from prolonged, unmanaged stress — whether from work, caregiving, academic
+                pressure, or a combination. Lack of control, unclear expectations, and insufficient support increase
+                risk.</p>
+            <h3>When to Seek Help</h3>
+            <p>If you feel constantly exhausted, disconnected, and unable to cope with daily responsibilities, it may be
+                time to talk to someone about strategies for recovery.</p>
+            <h3>Recovery Guidance</h3>
+            <p>Key strategies include setting healthy boundaries, prioritizing rest, reconnecting with activities you
+                enjoy, delegating tasks, and seeking professional support when needed. Recovery starts with small,
+                intentional changes.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or
+                    text <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.</p>
             </div>
-        </section>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+                    <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting
+                        people with the support they need.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="issues.html">Issues</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="resources.html">Resources</a>
+                    <a href="support.html">Get Help</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Help</h4>
+                    <a href="support.html">Emergency Support</a>
+                    <a href="resources.html">Breathing Exercise</a>
+                    <a href="resources.html">Self-Care Checklist</a>
+                </div>
 
-        <section class="issues-grid-section section">
-            <div class="container">
-                <div class="issues-grid reveal">
-                    <!-- Depression Card -->
-                    <div class="issue-card" onclick="openModal('depression')">
-                        <div class="issue-icon">😔</div>
-                        <h3>Depression</h3>
-                        <p>Persistent feelings of sadness and loss of interest.</p>
-                        <button class="btn-text">Read More &rarr;</button>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">👤</span>
+                        <span class="footer-contact-name">Priya</span>
                     </div>
-
-                    <!-- Anxiety Card -->
-                    <div class="issue-card" onclick="openModal('anxiety')">
-                        <div class="issue-icon">😟</div>
-                        <h3>Anxiety Disorders</h3>
-                        <p>Overwhelming feelings of worry, fear, or dread.</p>
-                        <button class="btn-text">Read More &rarr;</button>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+918396014848">+91 8396014848</a>
                     </div>
-
-                    <!-- PTSD Card -->
-                    <div class="issue-card" onclick="openModal('ptsd')">
-                        <div class="issue-icon">🧠</div>
-                        <h3>PTSD</h3>
-                        <p>Post-Traumatic Stress Disorder following a traumatic event.</p>
-                        <button class="btn-text">Read More &rarr;</button>
-                    </div>
-
-                    <!-- Bipolar Card -->
-                    <div class="issue-card" onclick="openModal('bipolar')">
-                        <div class="issue-icon">🌓</div>
-                        <h3>Bipolar Disorder</h3>
-                        <p>Cycles of high (mania) and low (depression) moods.</p>
-                        <button class="btn-text">Read More &rarr;</button>
-                    </div>
-
-                    <!-- Eating Disorders Card -->
-                    <div class="issue-card" onclick="openModal('eating')">
-                        <div class="issue-icon">🍏</div>
-                        <h3>Eating Disorders</h3>
-                        <p>Unhealthy relationships with food and body image.</p>
-                        <button class="btn-text">Read More &rarr;</button>
-                    </div>
-
-                    <!-- Stress/Burnout Card -->
-                    <div class="issue-card" onclick="openModal('stress')">
-                        <div class="issue-icon">🔥</div>
-                        <h3>Stress & Burnout</h3>
-                        <p>Physical and mental exhaustion from prolonged stress.</p>
-                        <button class="btn-text">Read More &rarr;</button>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📧</span>
+                        <a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Modal Structure -->
-        <div id="issueModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div id="modalBody">
-                    <!-- Dynamic Content -->
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not
+                    provide medical advice or diagnosis.</p>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        const issueData = {
-            depression: {
-                title: "Depression",
-                symptoms: "Persistent sadness, loss of energy, changes in sleep or appetite, difficulty concentrating.",
-                causes: "Combination of genetic, biological, environmental, and psychological factors.",
-                guidance: "Seeking therapy (CBT), medication if prescribed, maintaining social connections, and regular exercise.",
-                whenToSeekHelp: "When feelings last longer than 2 weeks and interfere with daily life."
-            },
-            anxiety: {
-                title: "Anxiety Disorders",
-                symptoms: "Excessive worry, restlessness, rapid heartbeat, panic attacks, avoiding certain situations.",
-                causes: "Trauma, stress, genetics, or underlying health issues.",
-                guidance: "Cognitive Behavioral Therapy (CBT), mindfulness, deep breathing, and identifying triggers.",
-                whenToSeekHelp: "When worry is uncontrollable and starts causing physical symptoms or avoiding life tasks."
-            },
-            ptsd: {
-                title: "PTSD",
-                symptoms: "Flashbacks, nightmares, severe anxiety, and uncontrollable thoughts about the event.",
-                causes: "Experiencing or witnessing a terrifying event.",
-                guidance: "Trauma-focused therapy, group support, and grounding techniques.",
-                whenToSeekHelp: "If upsetting thoughts and feelings about the event continue for more than a month."
-            },
-            bipolar: {
-                title: "Bipolar Disorder",
-                symptoms: "Extreme mood swings from high (mania) to low (depression).",
-                causes: "Brain structure, genetics, and environment.",
-                guidance: "Long-term treatment with medication and psychotherapy is typically required.",
-                whenToSeekHelp: "During periods of intense mania or severe depressive episodes."
-            },
-            eating: {
-                title: "Eating Disorders",
-                symptoms: "Abnormal eating habits, preoccupation with weight/body shape, purging, or extreme restriction.",
-                causes: "Complex interaction of genetic, biological, behavioral, psychological, and social factors.",
-                guidance: "Medical monitoring, nutritional counseling, and therapy.",
-                whenToSeekHelp: "As soon as patterns of disordered eating are recognized."
-            },
-            stress: {
-                title: "Stress & Burnout",
-                symptoms: "Exhaustion, cynicism, reduced professional efficacy, headaches, and irritability.",
-                causes: "Prolonged exposure to high-pressure environments, lack of work-life balance.",
-                guidance: "Setting boundaries, taking breaks, prioritizing sleep, and outsourcing tasks.",
-                whenToSeekHelp: "When physical and emotional exhaustion stops you from functioning at work or home."
-            }
-        };
-
-        function openModal(id) {
-            const data = issueData[id];
-            const body = document.getElementById('modalBody');
-            body.innerHTML = `
-                <h2>${data.title}</h2>
-                <div class="modal-section">
-                    <h4>Symptoms</h4>
-                    <p>${data.symptoms}</p>
-                </div>
-                <div class="modal-section">
-                    <h4>Causes</h4>
-                    <p>${data.causes}</p>
-                </div>
-                <div class="modal-section">
-                    <h4>Recovery Guidance</h4>
-                    <p>${data.guidance}</p>
-                </div>
-                <div class="modal-section">
-                    <h4>When to Seek Help</h4>
-                    <p>${data.whenToSeekHelp}</p>
-                </div>
-                <a href="support.html" class="btn btn-primary" style="margin-top: 1rem;">Get Support for ${data.title}</a>
-            `;
-            document.getElementById('issueModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scroll
-        }
-
-        function closeModal() {
-            document.getElementById('issueModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close on outside click
-        window.onclick = function (event) {
-            const modal = document.getElementById('issueModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/voiceflow-assistant.js" defer></script>
 </body>
 
 </html>

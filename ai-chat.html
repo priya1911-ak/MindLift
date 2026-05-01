@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Talk to MindLift AI — your supportive mental health companion. Voice and text chat powered by AI, available 24/7.">
+  <title>AI Chat – MindLift</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== AI CHAT SECTION ==================== -->
+  <section class="aichat-page" id="aichat-page">
+
+    <!-- Left: Info Panel -->
+    <aside class="aichat-sidebar">
+      <div class="aichat-sidebar-inner">
+        <div class="aichat-brand">
+          <div class="aichat-brand-icon">🧠</div>
+          <h2>MindLift AI</h2>
+          <p>Your 24/7 supportive companion</p>
+        </div>
+
+        <div class="aichat-features">
+          <div class="aichat-feature">
+            <span class="aichat-feature-icon">🎤</span>
+            <div>
+              <h4>Voice Chat</h4>
+              <p>Speak naturally — I'll listen and respond aloud</p>
+            </div>
+          </div>
+          <div class="aichat-feature">
+            <span class="aichat-feature-icon">💬</span>
+            <div>
+              <h4>Text Chat</h4>
+              <p>Type your thoughts anytime you prefer</p>
+            </div>
+          </div>
+          <div class="aichat-feature">
+            <span class="aichat-feature-icon">🔒</span>
+            <div>
+              <h4>Private & Safe</h4>
+              <p>Your conversations stay on your device</p>
+            </div>
+          </div>
+          <div class="aichat-feature">
+            <span class="aichat-feature-icon">🌙</span>
+            <div>
+              <h4>Always Here</h4>
+              <p>Available anytime you need support</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="aichat-disclaimer">
+          <p>⚠️ MindLift AI is not a substitute for professional mental health care. If you're in crisis, please call
+            <strong>988</strong> or text <strong>HOME to 741741</strong>.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right: Chat Area -->
+    <main class="aichat-main">
+
+      <!-- Chat Header -->
+      <div class="aichat-header">
+        <div class="aichat-header-left">
+          <div class="aichat-avatar" id="aichat-avatar">
+            <span class="aichat-avatar-emoji">🧠</span>
+            <div class="aichat-waveform" id="aichat-waveform">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div>
+            <h3 class="aichat-header-title">MindLift AI</h3>
+            <span class="aichat-header-status" id="aichat-status">
+              <span class="aichat-status-dot"></span> Online
+            </span>
+          </div>
+        </div>
+        <div class="aichat-header-actions">
+          <button class="aichat-action-btn" id="aichat-mute-btn" aria-label="Mute voice" title="Mute/Unmute voice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+          <button class="aichat-action-btn" id="aichat-clear-btn" aria-label="Clear chat" title="Clear conversation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Messages -->
+      <div class="aichat-messages" id="aichat-messages" aria-live="polite">
+        <!-- Messages rendered by JS -->
+      </div>
+
+      <!-- Chat Input Bar -->
+      <div class="aichat-input-bar" id="aichat-input-bar">
+        <button class="aichat-mic-btn" id="aichat-mic-btn" aria-label="Start voice input" title="Click to speak">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </button>
+        <input type="text" class="aichat-text-input" id="aichat-text-input" placeholder="Type a message…"
+          autocomplete="off">
+        <button class="aichat-send-btn" id="aichat-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+
+    </main>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-emergency">
+        <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or text
+          <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not provide
+          medical advice or diagnosis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ai-chat-page.js"></script>
+</body>
+
+</html>

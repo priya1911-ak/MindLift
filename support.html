@@ -4,188 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Support | MindLift</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Get mental health support: helpline numbers, emergency contacts, professional guidance, and frequently asked questions. MindLift is here for you.">
+    <title>Get Support – MindLift</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="nav-indicator"></div>
 
-    <header class="header sticky">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                MindLift
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="support.html" class="active">Support</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">Get Support</h1>
+            <p class="reveal">You deserve help, and it is available to you right now. Let us guide you to the right
+                resources.</p>
+        </div>
+    </section>
+
+    <!-- ==================== SUPPORTIVE MESSAGE ==================== -->
+    <section class="section" id="supportive">
+        <div class="container" style="text-align:center;max-width:800px;">
+            <div class="reveal">
+                <p style="font-size:var(--fs-xl);font-weight:var(--fw-light);line-height:1.9;color:var(--clr-text);">
+                    If you are going through a difficult time, please know that <strong
+                        style="color:var(--clr-primary-dark);">you are not alone</strong>. Whatever you are feeling
+                    right now is valid, and seeking help is one of the bravest things you can do. There are people who
+                    care about you and want to help.
+                </p>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="page-header section bg-surface">
-            <div class="container reveal">
-                <h1>Get Support</h1>
-                <p class="lead">You don't have to carry the weight alone. Help is available.</p>
+    <!-- ==================== EMERGENCY SUPPORT ==================== -->
+    <section class="section" style="background:var(--clr-surface);" id="emergency">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Emergency Support</h2>
+                <p>If you or someone you know is in immediate danger or experiencing a mental health crisis, please use
+                    one of these resources right away.</p>
             </div>
-        </section>
 
-        <!-- Emergency Support -->
-        <section class="emergency section reveal">
-            <div class="container">
-                <div class="card bg-primary-light" style="border: 2px solid var(--primary);">
-                    <h2 style="color: var(--primary);">Emergency Support</h2>
-                    <p>If you or someone you know is in immediate danger or experiencing a life-threatening crisis,
-                        please contact emergency services immediately.</p>
-                    <div class="grid-2">
-                        <div class="helpline-card">
-                            <h3>988 Lifeline</h3>
-                            <p>Call or Text 988 (Available 24/7 in English and Spanish)</p>
-                        </div>
-                        <div class="helpline-card">
-                            <h3>Crisis Text Line</h3>
-                            <p>Text HOME to 741741 to connect with a Crisis Counselor.</p>
-                        </div>
-                    </div>
+            <div class="emergency-banner reveal">
+                <p style="font-size:var(--fs-lg);color:#4a2040;">🆘 If you are in <strong>immediate danger</strong>,
+                    please call your local emergency number (911 in the US) or go to the nearest emergency room.</p>
+            </div>
+
+            <div class="helpline-grid">
+                <div class="helpline-card reveal">
+                    <div class="helpline-icon">📞</div>
+                    <h3>988 Suicide &amp; Crisis Lifeline</h3>
+                    <p>Free, confidential support for people in distress. Available 24/7 via phone or chat.</p>
+                    <span class="helpline-number">Call or text: 988</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Professional Help Guidance -->
-        <section class="professional-help section reveal">
-            <div class="container">
-                <div class="grid-2">
-                    <div>
-                        <h2>Seeking Professional Help</h2>
-                        <p>Finding the right professional is a personal journey. Whether it's a therapist, psychiatrist,
-                            or counselor, taking the first step is a sign of strength.</p>
-                        <ul class="styled-list">
-                            <li><strong>Therapy:</strong> Talk therapy can help you process emotions and develop coping
-                                strategies.</li>
-                            <li><strong>Psychiatry:</strong> Medical doctors who can provide diagnoses and prescribe
-                                medications.</li>
-                            <li><strong>Support Groups:</strong> Connect with others who have similar experiences.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="info-box bg-secondary-light">
-                            <h3>How to Start?</h3>
-                            <ol class="styled-list" style="list-style: decimal; padding-left: 2rem;">
-                                <li>Check with your insurance provider for local options.</li>
-                                <li>Use online directories like Psychology Today.</li>
-                                <li>Ask your primary care doctor for a referral.</li>
-                                <li>Reach out to community mental health centers.</li>
-                            </ol>
-                        </div>
-                    </div>
+                <div class="helpline-card reveal">
+                    <div class="helpline-icon">💬</div>
+                    <h3>Crisis Text Line</h3>
+                    <p>Free crisis counseling via text message. Trained counselors available around the clock.</p>
+                    <span class="helpline-number">Text HOME to 741741</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- FAQ Accordion -->
-        <section class="faq section bg-surface reveal">
-            <div class="container">
-                <h2 class="text-center">Frequently Asked Questions</h2>
-                <div class="faq-container" style="max-width: 800px; margin: 2rem auto 0;">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            How do I know if I need help?
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M6 9l6 6 6-6" />
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>If your emotions are interfering with your daily life, relationships, or work for more
-                                than two weeks, it's a good idea to speak with a professional.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            is therapy confidential?
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M6 9l6 6 6-6" />
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes, therapists are legally required to keep your sessions private, with very few
-                                exceptions related to immediate safety concerns.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            What can I do if I can't afford therapy?
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M6 9l6 6 6-6" />
-                            </svg>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Many therapists offer a "sliding scale" fee based on income. You can also look into
-                                community clinics, university training centers, or non-profit organizations.</p>
-                        </div>
-                    </div>
+                <div class="helpline-card reveal">
+                    <div class="helpline-icon">🌍</div>
+                    <h3>International Association for Suicide Prevention</h3>
+                    <p>Provides a directory of crisis centers around the world to connect people in need with local
+                        support.</p>
+                    <span class="helpline-number">Visit: iasp.info/resources</span>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">MindLift</a>
-                <p>Spreading awareness and providing support for mental health across the globe.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="issues.html">Issues</a></li>
-                </ul>
-            </div>
-            <div class="footer-help">
-                <h4>Get Support</h4>
-                <p>Emergency? Call 988 (Suicide & Crisis Lifeline)</p>
-                <a href="support.html" class="btn btn-primary">Emergency Help</a>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 MindLift Campaign. Built with care for the community.</p>
+    </section>
+
+    <!-- ==================== PROFESSIONAL HELP ==================== -->
+    <section class="section" id="professional">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Finding Professional Help</h2>
+                <p>A mental health professional can provide the guidance and tools you need. Here is how to get started.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🔍</div>
+                    <h3>Talk to Your Doctor</h3>
+                    <p>Your primary care provider can be a great first step. They can assess your situation, provide
+                        referrals, and discuss treatment options with you.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(184,169,212,.12);">🧑‍⚕️</div>
+                    <h3>Therapists &amp; Counselors</h3>
+                    <p>Licensed therapists offer talk therapy in various formats — individual, group, family, or
+                        couples. Many offer virtual sessions for convenience and accessibility.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(157,213,176,.12);">🏥</div>
+                    <h3>Community Mental Health Centers</h3>
+                    <p>Many communities offer affordable or free mental health services. Check with your local
+                        government or search online for community resources near you.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(232,180,200,.12);">💻</div>
+                    <h3>Online Platforms</h3>
+                    <p>Telehealth platforms provide convenient access to licensed professionals from the comfort of your
+                        home. Many accept insurance or offer affordable self-pay rates.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(240,201,166,.12);">🤝</div>
+                    <h3>Support Groups</h3>
+                    <p>Peer-led support groups connect you with people who understand what you are going through. They
+                        are available in-person and online for almost every condition.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon" style="background:rgba(126,184,218,.12);">🎓</div>
+                    <h3>School &amp; Workplace Programs</h3>
+                    <p>Many schools and employers offer employee assistance programs (EAPs) and counseling services at
+                        no additional cost. Ask your HR department or school counselor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="section" style="background:var(--clr-surface);" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about mental health support, answered with care.</p>
+            </div>
+
+            <div class="accordion reveal">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>How do I know if I need professional help?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            If your feelings are persistent (lasting more than two weeks), interfere with daily life,
+                            relationships, or work, or include thoughts of self-harm, it is a good idea to reach out to
+                            a professional. You do not need to be in crisis to seek help — prevention and early support
+                            are valuable too.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>What happens during a first therapy session?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            A first session is usually about getting to know you. The therapist will ask about your
+                            background, what brings you to therapy, and your goals. It is a safe, judgment-free space.
+                            You can share as much or as little as you feel comfortable with.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Is therapy confidential?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Yes, therapy is confidential. Licensed therapists are bound by ethical and legal standards
+                            to protect your privacy. The only exceptions are if there is imminent danger to yourself or
+                            others, or if required by law (such as suspected abuse of a minor).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Can I support a friend without being a therapist?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Absolutely. You do not need to be a professional to help. Listen without judgment, validate
+                            their feelings, avoid giving unsolicited advice, and gently encourage them to seek
+                            professional help. Your presence and empathy can mean a great deal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>What if I cannot afford therapy?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            There are many options: community mental health centers often provide sliding-scale fees;
+                            many therapists offer pro bono slots; online platforms sometimes have lower costs;
+                            universities often have training clinics with reduced rates; and crisis hotlines are always
+                            free.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>How long does treatment usually take?</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-body" role="region">
+                        <div class="accordion-body-inner">
+                            Treatment length varies based on the individual and condition. Some people see improvement
+                            in a few weeks of therapy, while others benefit from longer-term support. Your therapist
+                            will work with you to set goals and review progress regularly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-emergency">
+                <p>🆘 <strong>In a crisis?</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) or
+                    text <strong>HOME to 741741</strong> (Crisis Text Line). You are not alone.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Mind<span>Lift</span></a>
+                    <p>A public awareness campaign dedicated to breaking the stigma around mental health and connecting
+                        people with the support they need.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="issues.html">Issues</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="resources.html">Resources</a>
+                    <a href="support.html">Get Help</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Help</h4>
+                    <a href="support.html">Emergency Support</a>
+                    <a href="resources.html">Breathing Exercise</a>
+                    <a href="resources.html">Self-Care Checklist</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">👤</span>
+                        <span class="footer-contact-name">Priya</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+918396014848">+91 8396014848</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📧</span>
+                        <a href="mailto:priya996799@gmail.com">priya996799@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MindLift. All rights reserved. This site is for awareness purposes only and does not
+                    provide medical advice or diagnosis.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // FAQ Accordion Logic
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/voiceflow-assistant.js" defer></script>
 </body>
 
 </html>

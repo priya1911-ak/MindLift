@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the MindLift community chat rooms. Connect with others, share experiences, and offer support in a safe and welcoming space.">
+    <title>Community Chat – MindLift</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Chat page overrides */
+        .chat-page-section {
+            padding: calc(var(--nav-height) + var(--sp-lg)) var(--sp-lg) var(--sp-lg);
+            min-height: 100vh;
+            background: var(--clr-bg);
+        }
+
+        @media (max-width: 768px) {
+            .chat-sidebar {
+                display: none;
+            }
+
+            .chat-room-wrapper {
+                height: calc(100vh - var(--nav-height) - 30px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="MindLift Home">Mind<span>Lift</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="resources.html">Resources</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Login Overlay -->
+    <div class="chat-login-overlay" id="chat-login-overlay">
+        <div class="chat-login-card">
+            <div class="login-icon">💬</div>
+            <h2>Join the Conversation</h2>
+            <p>Enter your display name to connect with the MindLift community. This is a safe space — be kind and
+                supportive.</p>
+            <input type="text" id="chat-username-input" placeholder="Your display name…" maxlength="20" autofocus>
+            <button class="btn btn-primary" id="chat-login-btn" style="width:100%;">Join Chat 🚀</button>
+            <p style="margin-top:var(--sp-md);font-size:.75rem;opacity:.7;">Your name is saved locally. No account
+                required.</p>
+        </div>
+    </div>
+
+    <!-- Chat Room Layout -->
+    <section class="chat-page-section">
+        <div class="chat-room-wrapper">
+
+            <!-- Sidebar -->
+            <aside class="chat-sidebar">
+                <div class="chat-sidebar-header">
+                    <h3>💬 Chat Rooms</h3>
+                    <p>Choose a topic to join</p>
+                </div>
+                <div class="chat-rooms-list" id="chat-rooms-list">
+                    <!-- Rendered by JS -->
+                </div>
+                <div class="chat-online-section">
+                    <h4>🟢 Online Members</h4>
+                    <div id="chat-online-list">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Chat Area -->
+            <div class="chat-main">
+                <div class="chat-main-header">
+                    <div>
+                        <h3 id="chat-room-title">💬 General Chat</h3>
+                        <span class="room-info" id="chat-room-desc">Open conversation for everyone</span>
+                    </div>
+                    <span class="online-count" id="chat-online-count">0 online</span>
+                </div>
+
+                <div class="chat-main-messages" id="chat-main-messages">
+                    <!-- Messages rendered by JS -->
+                </div>
+
+                <div class="chat-main-input">
+                    <button class="emoji-btn" id="chat-emoji-btn" type="button" aria-label="Open emoji picker">
+                        😊
+                        <div class="emoji-picker" id="chat-emoji-picker">
+                            <!-- Populated by JS -->
+                        </div>
+                    </button>
+                    <input type="text" id="chat-msg-input" placeholder="Type a message…" aria-label="Chat message"
+                        autocomplete="off">
+                    <button class="send-btn" id="chat-send-btn" aria-label="Send message">➤</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
